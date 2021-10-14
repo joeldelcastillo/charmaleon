@@ -670,10 +670,11 @@ function drawA(vol) {
   ctx.beginPath();
   ctx.moveTo(172.15,558.29,466,609.57);
   ctx.lineTo(722.62,558.29);
-  ctx.bezierCurveTo(703.74, 562.08  + 1000* vol  , 676.29  ,  567.5   + 1000* vol, 643.15 ,574.21  + 1000* vol);
-  ctx.bezierCurveTo(525.20, 597.79  + 1000* vol  , 466.00  ,  609.57  + 1000* vol, 453.19 ,609.5   + 1000* vol);
-  ctx.bezierCurveTo(395.84, 609.18  + 1000* vol  , 394.19  ,  594.43  + 1000* vol, 252.51 ,570.39  + 1000* vol);
-  ctx.bezierCurveTo(218.40, 564.60  + 1000* vol  , 190.34  ,  560.68  + 1000* vol, 172.15 ,558.29  + 200* vol);
+  let yAmp = 500;
+  ctx.bezierCurveTo(703.74, 562.08  + yAmp* vol  , 676.29  ,  567.5   + yAmp* vol, 643.15 ,574.21  + yAmp* vol);
+  ctx.bezierCurveTo(525.20, 597.79  + yAmp* vol  , 466.00  ,  609.57  + yAmp* vol, 453.19 ,609.5   + yAmp* vol);
+  ctx.bezierCurveTo(395.84, 609.18  + yAmp* vol  , 394.19  ,  594.43  + yAmp* vol, 252.51 ,570.39  + yAmp* vol);
+  ctx.bezierCurveTo(218.40, 564.60  + yAmp* vol  , 190.34  ,  560.68  + yAmp* vol, 172.15 ,558.29  + 200* vol);
   ctx.closePath();
 
   ctx.fill();
@@ -685,8 +686,8 @@ function drawA(vol) {
 
   //-------------------------------------------------Lengua
   ctx.beginPath();
-  ctx.moveTo(464.68,601.8);
-  ctx.bezierCurveTo(446.18,602.6899999999999 ,419.75,595.42,415.48,578.54);
+  // ctx.moveTo(464.68,601.8);
+  ctx.bezierCurveTo(446.18,602.6899999999999+  yAmp* vol,419.75,595.42 + yAmp* vol,415.48,578.54 + yAmp* vol);
   ctx.bezierCurveTo(414,572.67,415.57,567.11,417.20000000000005,563.26);
   ctx.lineTo(508.15000000000003,563.26);
   ctx.translate(487.61967977058345,572.0933714558829);
@@ -694,7 +695,7 @@ function drawA(vol) {
   ctx.arc(0,0,22.35,-0.40631729583278225,0.16933737751650718,0);
   ctx.rotate(0);
   ctx.translate(-487.61967977058345,-572.0933714558829);
-  ctx.bezierCurveTo(506.47,592.27,482,601,464.68,601.8);
+  ctx.bezierCurveTo(506.47,592.27 + yAmp* vol,482,601 + yAmp* vol,464.68,601.8 + yAmp* vol);
   ctx.closePath();
   ctx.fill();
   ctx.stroke();
